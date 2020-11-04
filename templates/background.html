@@ -1,0 +1,79 @@
+{% extends '_base.html' %}
+
+{% block main %}
+<h2>SWIB 2020 - Sinopia Linked Data Editor</h2>
+<h1>Background</h1>
+<p class="lead">
+ Funded by the Mellon T. Foundation, the Sinopia Editor is currently on version
+ <strong>3.5.2</strong> and was developed primiarly by Stanford
+ University Libraries.
+</p>
+<div class="card-group">
+  <div class="card">
+    <header class="card-header">Workcycle One 2018-2019</header>
+    <div class="card-body">
+      <p class="card-text">
+        Initially a fork of the original Library of Congress
+        BIBFRAME Editor code base, Sinopia Editor was heavily
+        refactored to use front-end <a href="https://reactjs.org/">React</a>
+        Javascript components.
+      </p>
+      <p class="card-text">
+        Back-end RDF management was accomplished using
+        <a href="#">Trellis</a> Linked-Data Platform along with
+        Elasticsearch search index.
+      </p>
+      <p class="card-text">
+        Sinopia Stack deployed on Amazon Web Services (AWS)
+      </p>
+      <p class="card-text">
+        <small class="text-muted">Started</small>
+      </p>
+    </div>
+  </div>
+  <div class="card text-blue bg-info">
+    <div class="card-header">Workcycle Two 2019</div>
+    <div class="card-body">
+      <p class="card-text">
+        First production use of Sinopia to create RDF descriptions in
+        17 institutional co-horts
+      </p>
+      <p class="card-text">
+        User interface improvements and established work-flows for
+        JSON-based Resource Templates.
+      </p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">Workcycle Three 2020</div>
+    <div class="card-body">
+      <p class="card-text">
+        Migrated off of Trellis in favor of AWS DocumentDB.
+      </p>
+      <p class="card-text">
+        Created an <a href="api.html">API</a> providing CRUD
+        operations along with user customization and BIBFRAME
+        specific enhancements.
+      </p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block slide_nav %}
+<div class="btn-group float-right" role="group" aria-label="Basic mixed styles example">
+  <a type="button" class="btn btn-primary" href="/index.html">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+     <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
+    </svg>
+    Home
+  </a>
+  <a type="button" class="btn btn-success" href="/rdf-templates.html">RDF Templates
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+     <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+    </svg>
+  </a>
+</div>
+{% endblock %}
