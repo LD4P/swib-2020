@@ -81,8 +81,39 @@
 <h1>RDF Templates</h1>
 <div class="container">
   <div class="row">
-    <div class="col-7">
+    <div class="col-8">
       <h3>Using RDF to Create RDF</h3>
+      <p>
+        The flexibility of RDF to represent a "meta" layer for describing
+        resources in Sinopia means that catalogers
+        use the same user interface for both RDF templates and cataloging the
+        resources with those templates.
+      </p>
+      <p>
+        Below is a simple example of an RDF template created for a
+        <a href="https://schema.org/Book">Schema.org Book</a>.
+      </p>
+      <h4>Schema.org Book RDF Template Sample</h4>
+      <pre>
+        <> &lt;http://sinopia.io/vocabulary/hasResourceTemplate&gt; "sinopia:template:resource";
+            a &lt;http://sinopia.io/vocabulary/ResourceTemplate&gt;;
+            &lt;http://sinopia.io/vocabulary/hasClass&gt; &lt;http://schema.org/Book&gt;;
+            &lt;http://sinopia.io/vocabulary/hasPropertyTemplate&gt; _:b1.
+        _:b1 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; &lthttp://www.w3.org/1999/02/22-rdf-syntax-ns#nil&gt;;
+            &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:b2.
+        _:b2 a &lt;http://sinopia.io/vocabulary/PropertyTemplate&gt;;
+            &lt;http://sinopia.io/vocabulary/hasPropertyUri&gt; &lthttp://schema.org/name&gt;;
+            &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; "A Name"@eng.
+      </pre>
+      <p>
+        The Book template is edited as an RDF template, similar to this screenshot:
+      </p>
+      <img src="img/sinopia-rdf-template.png" alt="Sinopia screenshot of editing RDF Template" />
+      <p>
+        Sinopia then renders the Book Template as a form for catalogers to create an
+        RDF description for a resource as an Schema.org Book, pictured below:
+      </p>
+      <img src="img/sinopia-book-editing.png" alt="Sinopia screenshot of editing a Schema.org Book resource" />
     </div>
     <div class="col">
       <div class="alert alert-info" role="alert">
