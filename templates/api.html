@@ -11,7 +11,16 @@
         <p>
           In the first two iterations of Sinopia, all of the RDF and JSON data
           was stored and managed through the Linked-Data Platform
-          <a href="#">Trellis</a>.
+          <a href="https://www.trellisldp.org/">Trellis</a> running on
+          Amazon Web Services cloud with their Relational Database Service (RDS)
+          to store and manage the data.
+        </p>
+        <p>
+          As Sinopia matured, the scability of Trellis was a concern as the
+          trival amount of RDF and JSON being managed was hitting performance
+          bottlenecks. Other issues with Trellis was the extremely small user base
+          and the inflexibility of Trellis to manage other data required by
+          requested new features for Sinopia.
         </p>
       </div>
       <hr>
@@ -23,7 +32,6 @@
           <a href="https://ld4p.github.io/sinopia_api/">https://ld4p.github.io/sinopia_api/</a>.
         </p>
       </div>
-
     </div>
     <div class="col">
       <p>
@@ -31,7 +39,19 @@
         API service, running on AWS, that offers CRUD management of RDF templates
         and resources within the editor.
       </p>
-
+      <p>
+        Moving away from Trellis, the Sinopia development team switch to using
+        <a href="https://aws.amazon.com/documentdb/">DocumentDB</a>, AWS's cloud
+        hosted version of <a href="https://www.mongodb.com/">MongoDB</a>. Moving
+        to MongoDB addressed the scability concerns as well as provided a more
+        flexible data storage for the new personalization features being implemented
+        in Sinopia.
+      </p>
+      <p>
+        The Sinopia API also offers easier access for external uses like individual
+        institutional triplestores and machine learning opportunities like
+        the <a href="https://github.com/ld4p/rdf-classify">RDF Classifier</a>.
+      </p>
     </div>
   </div>
 </div>
