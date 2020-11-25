@@ -4,8 +4,8 @@
 <h2>SWIB 2020 - Sinopia Linked Data Editor</h2>
 <h1>Background</h1>
 <p class="lead">
- Funded by the Andrew W. Mellon Foundation, the Sinopia Editor is currently on version
- <strong>3.5.6</strong> and was developed primiarly by Stanford
+ Funded by the Andrew W. Mellon Foundation, the Sinopia Editor and back-end supporting services 
+ is currently on version <strong>3.5.6</strong> and is developed primarily by Stanford
  University Libraries.
 </p>
 <div class="card-group">
@@ -13,21 +13,21 @@
     <header class="card-header">Workcycle One 2018-2019</header>
     <div class="card-body">
       <p class="card-text">
-        Initially a fork of the original Library of Congress
-        BIBFRAME Editor code base, Sinopia Editor was heavily
-        refactored to use front-end <a href="https://reactjs.org/">React</a>
-        Javascript components.
+        Initially a fork of the first Library of Congress
+        BIBFRAME Editor code base, the Sinopia Editor was heavily
+        refactored using the front-end Javascript 
+        <a href="https://reactjs.org/">React</a> framework
+        composed of web-based components using <a href="https://redux.js.org/">Redux</a>
+        for state managment.
       </p>
       <p class="card-text">
-        Back-end RDF management was accomplished using
-        <a href="#">Trellis</a> Linked-Data Platform along with
-        Elasticsearch search index.
+        Back-end RDF management was accomplished using 
+        <a href="https://www.trellisldp.org/">Trellis</a>, a Linked-Data Platform 
+        supported by a <a href="https://www.elastic.co/">Elasticsearch</a> search index.
       </p>
       <p class="card-text">
-        Sinopia Stack deployed on Amazon Web Services (AWS)
-      </p>
-      <p class="card-text">
-        <small class="text-muted">Started</small>
+        The Sinopia Stack is deployed on Amazon Web Services (AWS) to better support 
+        a collaborative cataloging environment for multiple institutions. 
       </p>
     </div>
   </div>
@@ -35,12 +35,14 @@
     <div class="card-header">Workcycle Two 2019</div>
     <div class="card-body">
       <p class="card-text">
-        First production use of Sinopia to create RDF descriptions in
-        17 institutional co-horts
+        First production use of Sinopia to create RDF descriptions by
+        17 cohort institutions. Many of the institutions were involved with 
+        different original cataloging projects that used Sinopia in their 
+        work.
       </p>
       <p class="card-text">
-        User interface improvements and established work-flows for
-        JSON-based Resource Templates.
+        User interface improvements were the main focus for this work-cycle and 
+        establishing work-flows for JSON-based Resource Templates.
       </p>
       <p class="card-text"><small class="text-muted"></small></p>
     </div>
@@ -49,7 +51,9 @@
     <div class="card-header">Workcycle Three 2020</div>
     <div class="card-body">
       <p class="card-text">
-        Migrated off of Trellis in favor of AWS DocumentDB.
+        Sinopia migrated off of Trellis in favor of AWS DocumentDB, major change from
+        using JSON Resource Templates to using RDF-based templates and depreciating 
+        the dedicated Profile Editor application.
       </p>
       <p class="card-text">
         Created an <a href="api.html">API</a> providing CRUD
@@ -63,8 +67,8 @@
 <hr>
 <h3>Current  Architecture</h3>
 <p>
- The Sinopia technology stack has evolved over the three work-cycles but at the highest level is a client-side React
- single page application (SPA) connecting to a server-side API that is a Node.js application running on Amazon Web
+ The Sinopia technology stack has evolved over the three work-cycles but at the broadest level is a client-side React
+ single page application (SPA) connecting to a server-side API running as Node.js applications on Amazon Web
  Services (AWS). There are three server-side helper applications that index incoming templates and resources,
  export resources, and offer a BIBFRAME RDF-to-MARC conversion.
 </p>
